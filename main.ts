@@ -14,15 +14,12 @@ let you: game.LedSprite = null
 game.setScore(0)
 you = game.createSprite(2, 2)
 let sb = game.createSprite(randint(0, 5), randint(0, 5))
-basic.pause(100000)
-game.gameOver()
-basic.showNumber(game.score())
 basic.forever(function () {
     if (you.isTouching(sb)) {
         game.addScore(1)
+        you.set(LedSpriteProperty.X, 2)
+        you.set(LedSpriteProperty.Y, 2)
+        sb.set(LedSpriteProperty.X, randint(0, 5))
+        sb.set(LedSpriteProperty.Y, randint(0, 5))
     }
-    you.set(LedSpriteProperty.X, 0)
-    you.set(LedSpriteProperty.Y, 0)
-    sb.set(LedSpriteProperty.X, randint(0, 5))
-    sb.set(LedSpriteProperty.Y, randint(0, 5))
 })
