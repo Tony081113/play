@@ -21,5 +21,6 @@ basic.forever(function () {
         you.set(LedSpriteProperty.Y, 2)
         sb.set(LedSpriteProperty.X, randint(0, 5))
         sb.set(LedSpriteProperty.Y, randint(0, 5))
+        basic.showNumber(game.score())
     }
 })
